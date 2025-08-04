@@ -1,7 +1,7 @@
 services:
 
   filebrowser-quantum:
-    image: gtstef/filebrowser
+    image: gtstef/filebrowser:latest
     container_name: filebrowser-quantum
     restart: unless-stopped
     ports:
@@ -13,3 +13,4 @@ services:
       - ./config.yaml:/home/filebrowser/data/config.yaml
       - ./data:/home/filebrowser/data
       - ./share:/share
+
