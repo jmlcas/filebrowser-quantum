@@ -1,18 +1,16 @@
 services:
 
-  filebrowser-quantum:
-    image: gtstef/filebrowser
-    container_name: filebrowser-quantum
+  filebrowser:
+    image: gtstef/filebrowser:latest
+    container_name: filebrowser
     restart: unless-stopped
     ports:
       - "8200:80"
     environment:
-      FILEBROWSER_CONFIG: "data/config.yaml"
-      TZ: "Europe/Madrid"
+      - TZ=Europe/Madrid
     volumes:
-      - ./config.yaml:/filebrowser-quantum/data/config.yaml
-      - ./data:/filebrowser-quantum/data
-      - ./share:/share
-
-
-
+      - ./config.yaml:/home/filebrowser/config.yaml
+      - ./documents:/documents
+      - ./movies:/movies
+      - ./photos:/photos
+      - ./data:/home/filebrowser/data
