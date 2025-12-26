@@ -1,8 +1,12 @@
 server:
+  port: 80
   sources:
-    - path: "./share"
+    - path: /documents
+    - path: /movies
+    - path: /photos
       config:
         defaultEnabled: true
+        
 frontend:
   name: "Servidor-1"
 auth:
@@ -11,3 +15,7 @@ auth:
   methods:
     password:
       enabled: true
+      
+integrations:
+  media:
+    ffmpegPath: "/usr/local/bin"
