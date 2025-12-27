@@ -10,7 +10,7 @@ services:
       - TZ=Europe/Madrid
     volumes:
       - ./config.yaml:/home/filebrowser/config.yaml
-      - ./documents:/documents
-      - ./movies:/movies
-      - ./photos:/photos
+      - ./documentos:/documents
+      - ./fotos:/photos
+      - ./vídeos:/movies
       - ./data:/home/filebrowser/data
